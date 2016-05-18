@@ -6,14 +6,14 @@ If you would like to test the page without access to an OnHub edit the following
 ```
 <?php
    $serverStatusUrl = "http://192.168.86.1/api/v1/status"; //OnHub address
-   // $serverStatusUrl = "status.json";                       //testing without OnHub
+   // $serverStatusUrl = "status.json";                    //testing without OnHub
 ?>
 ```
 
 #Features:
-* Uses [Material Design Lite](https://getmdl.io/index.html) to format page in material design
-* Converts uptime from `seconds` to `xx days xx hours xx minutes xx seconds`
-* Converts boolean statuses to color coded sensible values (Online, Set, Up ...)
+* Uses [Material Design Lite](https://getmdl.io/index.html) to format page.
+* Converts uptime from `seconds` to `xx days xx hours xx minutes xx seconds`.
+* Converts boolean statuses to color coded sensible values (Online, Set, Up ...).
 
 #TODO:
 * Currently dumps the whole status JSON with minimal modifications, should better display the status to user.
