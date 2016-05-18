@@ -1,0 +1,23 @@
+{
+   "software": {
+      "softwareVersion": "7978.51.0",
+      "updateChannel": "stable-channel",
+      "updateProgress": 0.0,
+      "updateRequired": false,
+      "updateStatus": "idle"
+   },
+   "system": {
+      "deviceId": "device-id-xxxx-xxxx-xxxxxxxxxxxx",
+      "hardwareId": "WHIRLWIND XXX-XXX-XXX",
+      "modelId": "MODELID",
+      "uptime": 1972784
+   },
+   "wan": {
+      "captivePortal": false,
+      "ethernetLink": true,
+      "invalidCredentials": false,
+      "ipAddress": true,
+      "online": true,
+      "pppoeDetected": false
+   }
+}

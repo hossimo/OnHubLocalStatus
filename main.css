@@ -1,0 +1,28 @@
+@charset "UTF-8";
+body{
+    color: black;
+}
+.green {
+  color: green;
+}
+.red {
+  color: red;
+}
+
+.card-wide.mdl-card {
+  width: 512px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.card-wide > .mdl-card__title {
+  color: #000;
+  height: 4em;
+  background: #B3C6DE;
+  text-transform: capitalize;
+}
+.mdl-data-table {
+  width: 100%;
+}
