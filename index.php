@@ -23,7 +23,7 @@
     $wan = $onHubStatus->wan;
 
     $version = $onHubStatus->software->softwareVersion;
-    $wanLink = $onHubStatus->wan->etherLink;
+    $wanLink = $onHubStatus->wan->ethernetLink;
     $wanOnline = $onHubStatus->wan->online;
     $systemUptime = $onHubStatus->system->uptime;
     function format($test, $true, $ifTrue, $ifFalse) {
@@ -61,6 +61,18 @@
                                 case "uptime":
                                 $v = ss2dhm($value);
                                 break;
+                                case 'captivePortal':
+                                $v = format($value, "0", "True", "False");
+                                break;
+                                case 'invalidCredentials':
+                                $v = format($value, "0", "True", "False");
+                                break;
+                                case 'pppoeDetected':
+                                $v = format($value, "0", "True", "False");
+                                break;
+                                case 'updateRequired':
+                                $v = format($value, "0", "True", "False");
+                                break;
                                 case "ethernetLink":
                                 $v = format($value, "1", "Up", "Down");
                                 break;
@@ -76,7 +88,11 @@
 
                             echo '<tr>';
                             echo '<td class="mdl-data-table__cell--non-numeric">'. $key .'</td>';
-                            echo '<td >'. $v .'</td>';
+                            if(!is_array($v)){
+                            	echo '<td >'. $v .'</td>';
+                            }else{
+                            	echo '<td >'. implode(',', $v) .'</td>';
+                            }
                             echo '</tr>';
                         } ?>
                     </tbody>
