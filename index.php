@@ -76,7 +76,11 @@
 
                             echo '<tr>';
                             echo '<td class="mdl-data-table__cell--non-numeric">'. $key .'</td>';
-                            echo '<td >'. $v .'</td>';
+                            if(!is_array($v)){
+                            	echo '<td >'. $v .'</td>';
+                            }else{
+                            	echo '<td >'. implode(',', $v) .'</td>';
+                            }
                             echo '</tr>';
                         } ?>
                     </tbody>
