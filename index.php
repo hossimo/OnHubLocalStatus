@@ -61,6 +61,18 @@
                                 case "uptime":
                                 $v = ss2dhm($value);
                                 break;
+                                case 'captivePortal':
+                                $v = format($value, "0", "True", "False");
+                                break;
+                                case 'invalidCredentials':
+                                $v = format($value, "0", "True", "False");
+                                break;
+                                case 'pppoeDetected':
+                                $v = format($value, "0", "True", "False");
+                                break;
+                                case 'updateRequired':
+                                $v = format($value, "0", "True", "False");
+                                break;
                                 case "ethernetLink":
                                 $v = format($value, "1", "Up", "Down");
                                 break;
