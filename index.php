@@ -79,7 +79,7 @@
                             if(!is_array($v)){
                             	echo '<td >'. $v .'</td>';
                             }else{
-                            	echo '<td >'. implode(',', $v) .'</td>';
+                            	echo '<td >'. implode('</br>', $v) .'</td>';
                             }
                             echo '</tr>';
                         } ?>
