@@ -23,7 +23,7 @@
     $wan = $onHubStatus->wan;
 
     $version = $onHubStatus->software->softwareVersion;
-    $wanLink = $onHubStatus->wan->etherLink;
+    $wanLink = $onHubStatus->wan->ethernetLink;
     $wanOnline = $onHubStatus->wan->online;
     $systemUptime = $onHubStatus->system->uptime;
     function format($test, $true, $ifTrue, $ifFalse) {
@@ -76,7 +76,11 @@
 
                             echo '<tr>';
                             echo '<td class="mdl-data-table__cell--non-numeric">'. $key .'</td>';
-                            echo '<td >'. $v .'</td>';
+                            if(!is_array($v)){
+                            	echo '<td >'. $v .'</td>';
+                            }else{
+                            	echo '<td >'. implode(',', $v) .'</td>';
+                            }
                             echo '</tr>';
                         } ?>
                     </tbody>
